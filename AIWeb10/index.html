@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- ✅ 這裡放你的 SEO meta -->
+  <title>C w C 智慧控制器｜智慧簡報與團隊控制最佳幫手</title>
+  <meta name="description" content="C w C 智慧控制器，結合創新功能與簡約設計，適用於簡報演講、教學與團隊協作等情境，是提升效率的智慧選擇。內附產品圖、功能特寫與實際應用情境展示。">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+<!-- Swiper CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
+ <!-- DataTables CSS -->
+  <link href="https://cdn.datatables.net/1.13.6/css/dataTables.bootstrap5.min.css" rel="stylesheet">
+  <style>
+  body {
+    background-color: #d3d3d3;
+  padding-top: 70px;        /* 為固定在上方的 navbar 預留空間 */
+  padding-bottom: 250px;    /* 為固定在下方的 footer 預留空間 */
+}
+
+/* 固定在頂部的 navbar */
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1030;
+  background-color: #ffffff;  /* 確保有背景不透明 */
+  border-bottom: 1px solid #dee2e6;
+}
+
+/* 固定在底部的 footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #f8f9fa;
+  padding: 40px 20px;
+  border-top: 1px solid #dee2e6;
+  z-index: 1020;
+}
+
+.footer-col {
+  margin-bottom: 20px;
+}
+
+.footer-icon a {
+  margin-right: 15px;
+  color: #343a40;
+  font-size: 1.2rem;
+}
+
+.navbar-brand img {
+  height: 40px;
+}
+
+
+/* 產品圖片 */
+  /* Hero Banner */
+    .jumbotron-hero {
+      background-image: url('images/hero.png');
+      background-size: cover;
+      background-position: center;
+      height: 400px;
+      display: flex;
+      align-items: center;
+      color: white;
+    }
+
+    .hero-text {
+      background-color: rgba(0, 0, 0, 0.5);
+      padding: 20px 30px;
+      border-radius: 10px;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    /* Swiper Container */
+    .swiper {
+      width: 100%;
+      max-width: 1000px;
+      padding: 60px 0;
+    }
+
+    .swiper-slide {
+      background: #fff;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .swiper-slide img {
+      width: 100%;
+      height: 250px;
+      object-fit: cover;
+    }
+
+    .slide-caption {
+      padding: 15px;
+      text-align: center;
+      font-weight: bold;
+      font-size: 1rem;
+    }
+
+    @media (max-width: 768px) {
+      .jumbotron-hero {
+        height: 600px;
+      }
+
+      .hero-text {
+        font-size: 1.2rem;
+        padding: 10px 20px;
+      }
+
+      .swiper-slide img {
+        height: 200px;
+      }
+    }
+/* 產品圖片 */
+
+/* 產品功能 */
+.container-highlight{
+
+  background-color:#888;
+  padding:20px;
+}
+.container-features{
+
+ 
+  padding:20px;
+}
+.feature-table {
+    margin-top: 2rem;
+  }
+  .card img {
+    height: 200px;
+    object-fit: contain;
+    background-color: #ffffff;
+    padding: 10px;
+  }
+  .highlight-icon {
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+    color: #0d6efd;
+  }
+
+  /* 促銷 */
+ .promo-img {
+      max-width: 100%;
+      max-height: 300px;
+      width: auto;
+      height: auto;
+      border-radius: 0.5rem;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      display: block;
+      margin: 0 auto;
+    }
+    .tab-content {
+      margin-top: 1.5rem;
+    }
+
+    /* promotion */
+.container-promotion{
+  background-color:#888;
+  padding:50px;
+}
+    .product-img {
+      width: 100%;
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+    .price-line {
+      text-decoration: line-through;
+      color: #888;
+      font-size: 0.9rem;
+    }
+    .cta-text {
+      font-weight: bold;
+      color: #0d6efd;
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+    }
+    .product-info p {
+      margin-bottom: 0.5rem;
+    }
+
+    .container-shopping{
+     
+      width:100%;
+      padding:40px;
+    }
+    /* 問與答 */
+       .faq-section, .form-section {
+      max-width: 720px;
+      margin: 0 auto;
+      background: #fff;
+      padding: 2rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+    }
+    h2 {
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+    }
+    .form-label {
+      font-weight: 500;
+    }
+
+    @media (max-width: 768px) {
+  footer .footer-col h6 {
+    font-size: 0.95rem;
+  }
+  footer .footer-col ul,
+  footer .footer-col p {
+    font-size: 0.85rem;
+  }
+  .footer-icon a {
+    font-size: 1.1rem;
+  }
+}
+
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="images/logo.png" alt="品牌 Logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+              aria-controls="navbarNav" aria-expanded="false" aria-label="切換導覽列">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item"><a class="nav-link" href="#">產品介紹</a></li>
+          <li class="nav-item"><a class="nav-link" href="#feature">功能特色</a></li>
+          <li class="nav-item"><a class="nav-link" href="#promotion">促銷方案</a></li>
+          <li class="nav-item"><a class="nav-link" target="_blank" href="https://script.google.com/macros/s/AKfycbwT7kMqt-56O-GgIr9L7XPTWHLryRbLlRx3XTaeSqzH3wGRgAXGRZ79Wqgxkb82PQi1/exec">常見問題</a></li>
+          <li class="nav-item"><a class="nav-link" href="#shopping">購物車</a></li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+ 
+  <!-- 產品圖片 -->
+
+  <!-- Hero Section -->
+  <div class="jumbotron-hero">
+    <div class="container">
+      <div class="hero-text">C w C 智慧控制器</div>
+    </div>
+  </div>
+
+  <!-- Swiper Section -->
+  <div class="container">
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="images/product1.png" alt="產品圖1">
+          <div class="slide-caption">產品正面外觀</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/product2.png" alt="產品圖2">
+          <div class="slide-caption">功能按鍵特寫</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/product3.png" alt="產品圖3">
+          <div class="slide-caption">桌面使用場景</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/scene1.png" alt="教授簡報情境">
+          <div class="slide-caption">教授在演講中使用</div>
+        </div>
+        <div class="swiper-slide">
+          <img src="images/scene2.png" alt="團隊使用情境">
+          <div class="slide-caption">團隊協作實際應用</div>
+        </div>
+      </div>
+
+      <!-- Navigation + Pagination -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+
+  <!-- 產品功能 -->
+  <div class="container-highlight" id="feature">
+    <h2 class="text-center mb-4">✨ 三大產品亮點</h2>
+    <div class="row mb-5">
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow">
+          <img src="images/card1.png" class="card-img-top" alt="亮點1">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fa-solid fa-bullseye highlight-icon"></i>一筆掌控，講者升級</h5>
+            <p class="card-text">集合投影、錄音、互動與健康監測於一體，讓講者無需分心，多工同步完成</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow">
+          <img src="images/card2.png" class="card-img-top" alt="亮點2">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fa-solid fa-lightbulb highlight-icon"></i>AI 輔助，智慧簡報</h5>
+            <p class="card-text">結合 AI 簡報摘要與觀眾分析，給出互動建議，講得更準更吸引人</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4">
+        <div class="card h-100 shadow">
+          <img src="images/card3.png" class="card-img-top" alt="亮點3">
+          <div class="card-body">
+            <h5 class="card-title"><i class="fa-solid fa-heart highlight-icon"></i>講者健康守護者</h5>
+            <p class="card-text">內建生理數據偵測與壓力回饋系統，打造身心兼顧的專業簡報體驗</p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
+    <div class="container-features">
+    <h2 class="text-center">📊 10項具體產品功能</h2>
+    <div class="table-responsive feature-table">
+      <table id="featureTable" class="table table-striped table-bordered">
+        <thead>
+          <tr>
+            <th>Icon</th>
+            <th>功能名稱</th>
+            <th>功能說明</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><i class="fa-solid fa-slideshare"></i></td>
+            <td>遠端簡報控制</td>
+            <td>無線操控投影片播放、切換與雷射指示</td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-video"></i></td>
+            <td>一鍵錄影同步</td>
+            <td>可同時錄製螢幕與聲音，保存完整簡報內容</td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-question-circle"></i></td>
+            <td>即時觀眾提問同步</td>
+            <td>講者可即時看到來自觀眾裝置的提問</td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-heart-pulse"></i></td>
+            <td>心率與壓力感測</td>
+            <td>內建 IoT 感測器監測講者的生理狀態</td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-robot"></i></td>
+            <td>AI 簡報摘要建議</td>
+            <td>自動分析簡報內容並即時提供重點提示</td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-microphone"></i></td>
+            <td>語音辨識筆記</td>
+            <td>即時語音轉文字，快速生成逐字稿與摘要</td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-bell"></i></td>
+            <td>講者互動提醒</td>
+            <td>AI 根據觀眾反應，建議講者調整節奏或互動</td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-chart-line"></i></td>
+            <td>講者健康回饋報告</td>
+            <td>每場簡報後自動產出健康與表現報告</td>
+          </tr>
+          <tr>
+            <td><i class="fa-brands fa-windows"></i></td>
+            <td>雙系統支援</td>
+            <td>支援 Windows / macOS 雙平台</td>
+          </tr>
+          <tr>
+            <td><i class="fa-solid fa-weight-scale"></i></td>
+            <td>可攜式輕量設計</td>
+            <td>僅重 80g，符合人體工學，方便長時間握持</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- 產品促銷 -->
+  <div class="container-promotion" id="promotion">
+    <h1 class="text-center mb-4">🎉 CWC 智慧簡報筆｜限時促銷中！</h1>
+
+    <!-- Tabs Navigation -->
+    <ul class="nav nav-tabs" id="promoTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <button class="nav-link active" id="tab-offer" data-bs-toggle="tab" data-bs-target="#offer" type="button" role="tab">特價優惠</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-video" data-bs-toggle="tab" data-bs-target="#video" type="button" role="tab">影片介紹</button>
+      </li>
+      <li class="nav-item" role="presentation">
+        <button class="nav-link" id="tab-detail" data-bs-toggle="tab" data-bs-target="#detail" type="button" role="tab">詳細內容</button>
+      </li>
+    </ul>
+
+    <!-- Tabs Content -->
+    <div class="tab-content" id="promoTabContent">
+      <!-- Tab 1: 特價優惠 -->
+      <div class="tab-pane fade show active" id="offer" role="tabpanel">
+        <div class="row justify-content-center align-items-center mt-4">
+          <div class="col-md-5 text-center mb-3">
+            <img src="images/promotion1.png" alt="促銷圖片" class="promo-img" />
+          </div>
+          <div class="col-md-7">
+            <h3>💡 CWC 智慧簡報筆｜限時破盤價只要 99 元！</h3>
+            <p>不只是筆，更是你的 AI 簡報戰友！</p>
+            <ul>
+              <li>📌 原價：199 元</li>
+              <li>📌 限時優惠：只要 99 元！</li>
+              <li>📌 再送：3 個月 AI 簡報功能免費使用！</li>
+            </ul>
+            <p>
+              🔹 支援語音轉文字<br>
+              🔹 自動生成簡報結構與建議內容<br>
+              🔹 一鍵即時投影，簡報不再手忙腳亂<br>
+              🔹 適合學生、上班族、講者、創作者
+            </p>
+            <p class="text-danger fw-bold">⚠️ 數量有限，售完即止！</p>
+            <a href="https://yourpromo.link" class="btn btn-primary">👉 立即搶購</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tab 2: 影片介紹 -->
+      <div class="tab-pane fade" id="video" role="tabpanel">
+        <div class="ratio ratio-16x9 mt-4">
+          <iframe src="https://www.youtube.com/embed/YA_Ie4LgsHU" title="促銷影片" allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <!-- Tab 3: 詳細內容（Google Docs） -->
+      <div class="tab-pane fade" id="detail" role="tabpanel">
+        <div class="ratio ratio-16x9 mt-4">
+          <iframe src="https://docs.google.com/document/d/1Dkd1CDPQXBfD51Y2x5AkxABALb2_nsS3W4my-MpXQP4/preview" frameborder="0"></iframe>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 購物車 -->
+
+  <div class="container-shopping text-center" id="shopping">
+    <h1 class="mb-4">CWC 智慧簡報筆</h1>
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#purchaseModal">🛒 立即購買</button>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal fade" id="purchaseModal" tabindex="-1" aria-labelledby="purchaseModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h5 class="modal-title" id="purchaseModalLabel">立即購買</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="關閉"></button>
+        </div>
+
+        <!-- Modal Body -->
+        <div class="modal-body">
+          <div class="row g-4">
+            <!-- 左欄：圖片 -->
+            <div class="col-md-6 text-center">
+              <img src="images/product1.png" alt="產品圖片" class="product-img" />
+            </div>
+
+            <!-- 右欄：說明 + 價格 + 數量 -->
+            <div class="col-md-6 product-info">
+              <p>
+                想讓簡報更有效率、內容更有說服力？<br />
+                現在就試試 <strong>CWC 智慧簡報筆</strong>，<br />
+                讓你的提案一氣呵成，從此不再卡稿！
+              </p>
+              <p class="cta-text">📣 立即升級簡報力！</p>
+
+              <div class="mb-2">
+                <span class="price-line">原價 NT$199</span><br />
+                <span class="text-danger fw-bold">特價 NT$99</span>
+              </div>
+
+              <div class="mb-3">
+                <label for="quantity" class="form-label">數量</label>
+                <input type="number" id="quantity" class="form-control" min="1" value="1" />
+              </div>
+
+              <p id="totalPrice">總金額：NT$99</p>
+              <button class="btn btn-success" onclick="checkout()">結帳</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal Footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">關閉</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- 問與答 -->
+
+
+ 
+
+  <!-- Footer -->
+ <footer class="bg-light border-top pt-4 pb-4">
+  <div class="container">
+    <div class="row text-center text-md-start flex-nowrap flex-md-wrap overflow-auto">
+
+      <!-- 網頁資訊 -->
+      <div class="col-4 col-md-4 footer-col px-2">
+        <h6 class="fw-bold">網頁資訊</h6>
+        <ul class="list-unstyled small">
+          <li>
+            <a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#aboutModal">關於我</a>
+          </li>
+          <li>
+            <a href="#" class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#storyModal">品牌故事</a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- 聯絡我們 -->
+      <div class="col-4 col-md-4 footer-col px-2">
+        <h6 class="fw-bold">聯絡我們</h6>
+        <ul class="list-unstyled small">
+          <li><i class="fas fa-phone me-1"></i>02-1234-5678</li>
+          <li><i class="fas fa-envelope me-1"></i>service@example.com</li>
+        </ul>
+      </div>
+
+      <!-- 追蹤我們 -->
+      <div class="col-4 col-md-4 footer-col px-2">
+        <h6 class="fw-bold">追蹤我們</h6>
+        <div class="footer-icon">
+          <a href="#"><i class="fab fa-instagram me-2"></i></a>
+          <a href="#"><i class="fab fa-youtube me-2"></i></a>
+          <a href="#"><i class="fab fa-facebook"></i></a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</footer>
+
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+  <script>
+    const swiper = new Swiper('.mySwiper', {
+      slidesPerView: 3,
+      spaceBetween: 20,
+      loop: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev'
+      },
+      breakpoints: {
+        0: {
+          slidesPerView: 1
+        },
+        576: {
+          slidesPerView: 2
+        },
+        992: {
+          slidesPerView: 3
+        }
+      }
+    });
+  </script>
+
+  <!-- Bootstrap JS + dependencies -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+  <!-- DataTables JS -->
+  <script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+  <script src="https://cdn.datatables.net/1.13.6/js/dataTables.bootstrap5.min.js"></script>
+
+  <script>
+    $(document).ready(function () {
+      $('#featureTable').DataTable({
+        pageLength: 5,
+        language: {
+          search: "搜尋功能：",
+          lengthMenu: "每頁顯示 _MENU_ 筆資料",
+          info: "顯示第 _START_ 至 _END_ 筆，共 _TOTAL_ 筆",
+          paginate: {
+            previous: "上一頁",
+            next: "下一頁"
+          },
+          zeroRecords: "沒有找到相關資料"
+        }
+      });
+    });
+  </script>
+ <script>
+    const salePrice = 99;
+
+    document.getElementById("quantity").addEventListener("input", function () {
+      const qty = parseInt(this.value) || 0;
+      const total = qty * salePrice;
+      console.log("使用者輸入數量：", qty);
+      console.log("單價：", salePrice);
+      console.log("計算總金額：", qty + " x " + salePrice + " = " + total);
+      document.getElementById("totalPrice").textContent = "總金額：NT$" + total;
+    });
+
+    function checkout() {
+      const qty = parseInt(document.getElementById("quantity").value) || 0;
+      if (qty < 1) {
+        alert("請輸入正確的數量");
+        console.log("⚠️ 錯誤：輸入的數量小於 1");
+        return;
+      }
+      const total = qty * salePrice;
+      console.log("✅ 結帳資訊：");
+      console.log("商品：CWC 智慧簡報筆");
+      console.log("數量：", qty);
+      console.log("總金額：NT$", total);
+      alert(`✅ 購買成功！\n商品：CWC 智慧簡報筆\n數量：${qty} 件\n總金額：NT$${total}`);
+    }
+  </script>
+<!-- 關於我 Modal -->
+<div class="modal fade" id="aboutModal" tabindex="-1" aria-labelledby="aboutModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="aboutModalLabel">關於我</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="關閉"></button>
+      </div>
+      <div class="modal-body p-0">
+        <iframe src="../AIWeb02/resume.html" width="100%" height="600px" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- 品牌故事 Modal -->
+<div class="modal fade" id="storyModal" tabindex="-1" aria-labelledby="storyModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-scrollable">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="storyModalLabel">品牌故事</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="關閉"></button>
+      </div>
+      <div class="modal-body p-0">
+        <iframe src="../AIWeb03/company.html" width="100%" height="600px" frameborder="0"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+</body>
+</html>
