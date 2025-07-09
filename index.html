@@ -20,7 +20,7 @@
   body {
     background-color: #d3d3d3;
   padding-top: 70px;        /* 為固定在上方的 navbar 預留空間 */
-  padding-bottom: 250px;    /* 為固定在下方的 footer 預留空間 */
+  
 }
 
 /* 固定在頂部的 navbar */
@@ -35,14 +35,13 @@
 
 /* 固定在底部的 footer */
 footer {
-  
-  bottom: 0;
   width: 100%;
   background-color: #f8f9fa;
   padding: 40px 20px;
   border-top: 1px solid #dee2e6;
-  z-index: 1020;
+  z-index: 1; /* 可以保留或移除都可 */
 }
+
 
 .footer-col {
   margin-bottom: 20px;
@@ -249,6 +248,7 @@ footer {
           <li class="nav-item"><a class="nav-link" href="#promotion">促銷方案</a></li>
           <li class="nav-item"><a class="nav-link" target="_blank" href="https://script.google.com/macros/s/AKfycbwT7kMqt-56O-GgIr9L7XPTWHLryRbLlRx3XTaeSqzH3wGRgAXGRZ79Wqgxkb82PQi1/exec">常見問題</a></li>
           <li class="nav-item"><a class="nav-link" href="#shopping">購物車</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">關於</a></li>
           
         </ul>
       </div>
@@ -525,7 +525,7 @@ footer {
  
 
   <!-- Footer -->
- <footer class="bg-light border-top pt-4 pb-4">
+ <footer class="bg-light border-top pt-4 pb-4" id="about">
   <div class="container">
     <div class="row text-center text-md-start flex-nowrap flex-md-wrap overflow-auto">
 
@@ -534,10 +534,10 @@ footer {
         <h6 class="fw-bold">網頁資訊</h6>
         <ul class="list-unstyled small">
           <li>
-            <a href="../AIWeb02/resume.html" class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#aboutModal">關於我</a>
+            <a href="AIWeb02/resume.html" class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#aboutModal">關於我</a>
           </li>
           <li>
-            <a href="../AIWeb03/company.html" class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#storyModal">品牌故事</a>
+            <a href="AIWeb03/company.html" class="text-decoration-none text-dark" data-bs-toggle="modal" data-bs-target="#storyModal">品牌故事</a>
           </li>
         </ul>
       </div>
@@ -656,7 +656,7 @@ footer {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="關閉"></button>
       </div>
       <div class="modal-body p-0">
-        <iframe src="../AIWeb02/resume.html" width="100%" height="600px" frameborder="0"></iframe>
+        <iframe src="AIWeb02/resume.html" width="100%" height="600px" frameborder="0"></iframe>
       </div>
     </div>
   </div>
@@ -671,7 +671,7 @@ footer {
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="關閉"></button>
       </div>
       <div class="modal-body p-0">
-        <iframe src="../AIWeb03/company.html" width="100%" height="600px" frameborder="0"></iframe>
+        <iframe src="AIWeb03/company.html" width="100%" height="600px" frameborder="0"></iframe>
       </div>
     </div>
   </div>
